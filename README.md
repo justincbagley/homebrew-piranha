@@ -1,2 +1,2 @@
 # homebrew-piranha
-Homebrew tap for PIrANHA
+A Homebrew tap for PIrANHA
