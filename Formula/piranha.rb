@@ -6,7 +6,11 @@ class PIrANHA < Formula
   ## - Example Homebrew Formula #2: https://github.com/omerxx/homebrew-tools/blob/master/formula/fed.rb
   ## - Blog #1 - https://www.prodops.io/blog/creating-homebrew-taps-for-private-internal-tools
   ## - Blog #2 - https://engineering.innovid.com/distributing-command-line-tools-with-homebrew-d03e795cadc8
-  ## - 
+  ## 
+  ## Resources not used yet, but potentially valuable for future distributions from
+  ## *private* GitHub repositories:
+  ## - Blog #1 - https://www.prodops.io/blog/creating-homebrew-taps-for-private-internal-tools
+  ## - Blog #2 - https://engineering.innovid.com/distributing-command-line-tools-with-homebrew-d03e795cadc8
   
   desc "Scripts for file processing and analysis in phylogenomics & phylogeography"
   homepage "https://justinbagley.org/PIrANHA/"
