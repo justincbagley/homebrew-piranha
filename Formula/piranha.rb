@@ -26,9 +26,9 @@ class PIrANHA < Formula
   #end
 
   ## Genertes a '--DEVEL | --devel' option:
-  devel do
-    url "https://github.com/justincbagley/PIrANHA.git", :using => git
-  end
+  #devel do
+  #  url "https://github.com/justincbagley/PIrANHA.git", :using => git
+  #end
   
   ## Commented out: depends_on "python@2"
   ## If any Python >= 2.7 < 3.x is okay (either from OS X or brewed):
