@@ -20,10 +20,10 @@ class PIrANHA < Formula
   ## Optionally, specify a repository to be used. Brew then generates a '--HEAD | --head' option. 
   ## Remember to also test it. 'master' is the default branch and doesn't need stating with a
   ## :branch conditional.
-  head "https://github.com/justincbagley/PIrANHA.git"
-  head do
-    url "https://github.com/justincbagley/PIrANHA.git"
-  end
+  #head "https://github.com/justincbagley/PIrANHA.git"
+  #head do
+  #  url "https://github.com/justincbagley/PIrANHA.git"
+  #end
 
   ## Genertes a '--DEVEL | --devel' option:
   devel do
@@ -68,7 +68,9 @@ class PIrANHA < Formula
 end
 
 ## Tap using:
+## FIRST CHOICE: ```$ brew tap justincbagley/homebrew-piranha ```
 ## ```$ brew tap piranha https://github.com/justincbagley/PIrANHA.git ```
+## NO it should be tapped using this:  git@github.com:justincbagley/homebrew-piranha.git
 ##
 ## The tap will be cloned to '/usr/local/Homebrew/Library/Taps/piranha'
 ##
