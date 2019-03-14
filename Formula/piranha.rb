@@ -1,4 +1,5 @@
-class PIrANHA < Formula
+class Piranha < Formula
+#class PIrANHA < Formula
 
   ## Resources used to make this file:
   ## - Homebrew Formula Cookbook: https://github.com/Homebrew/brew/blob/master/docs/Formula-Cookbook.md
