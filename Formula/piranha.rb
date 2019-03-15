@@ -12,7 +12,6 @@ class Piranha < Formula
   ## Optionally, specify a repository to be used. Brew then generates a '--HEAD | --head' option. 
   ## Remember to also test it. 'master' is the default branch and doesn't need stating with a
   ## :branch conditional.
-  # head "https://github.com/justincbagley/PIrANHA.git"
   head do
     url "https://github.com/justincbagley/PIrANHA.git"
   end
