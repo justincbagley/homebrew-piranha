@@ -17,9 +17,10 @@ class Piranha < Formula
   homepage "https://justinbagley.org/PIrANHA/"
 
   ### When PIrANHA repo is public:
-  url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz"
+  # url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz"
   ### When PIrANHA repo is private:
   # url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+  url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz"?private_token=#{ENV['GITHUB_HOMEBREW_TOKEN']}"
   sha256 "<SHA256>"
 
   ## Optionally, specify a repository to be used. Brew then generates a '--HEAD | --head' option. 
@@ -37,10 +38,8 @@ class Piranha < Formula
   
   ## Commented out: depends_on "python@2"
   ## If any Python >= 2.7 < 3.x is okay (either from OS X or brewed):
-#  depends_on :python
-#  depends_on :perl
-  depends_on "python"
-  depends_on "perl"
+#  depends_on "python"
+#  depends_on "perl"
   
   ## Using 'bin.install' here is essentially saying move '<script>' into #{prefix}/bin/. prefix.install is 
   ## essentially saying move/save script into the main or #{prefix} dir. Dir helps us copy a whole directory
@@ -68,14 +67,14 @@ class Piranha < Formula
   end
 
   test do
-    ## Modified example, commented out: assert_match "piranha v1.0", shell_output("#{bin}/piranha -V", 2)
+    ## Modified example, commented out: assert_match "piranha v1.0.0", shell_output("#{bin}/piranha -V", 2)
     system "piranha", "--version"
   end
 
 end
 
 ## Tap using:
-## FIRST CHOICE: ```$ brew tap justincbagley/homebrew-piranha ```
+## FIRST CHOICE: ```$ brew tap justincbagley/homebrew-piranha ```, then brew install piranha
 ## ```$ brew tap piranha https://github.com/justincbagley/PIrANHA.git ```
 ## NO it should be tapped using this:  git@github.com:justincbagley/homebrew-piranha.git
 ##
