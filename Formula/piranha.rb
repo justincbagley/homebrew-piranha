@@ -17,10 +17,10 @@ class Piranha < Formula
   homepage "https://justinbagley.org/PIrANHA/"
 
   ### When PIrANHA repo is public:
-  url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz"
+  # url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz"
   ### When PIrANHA repo is private:
   # url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-  # url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz?private_token=#{ENV['GITHUB_HOMEBREW_TOKEN']}"
+  url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz?private_token=#{ENV['GITHUB_HOMEBREW_TOKEN']}"
   # url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz?private_token=#{puts ENV['GITHUB_HOMEBREW_TOKEN']}"
   sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
   version "0.2"
