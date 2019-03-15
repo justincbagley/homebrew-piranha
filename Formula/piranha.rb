@@ -21,8 +21,10 @@ class Piranha < Formula
   ### When PIrANHA repo is private:
   # url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
   url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz"?private_token=#{ENV['GITHUB_HOMEBREW_TOKEN']}"
-  sha256 "<SHA256>"
 
+  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  version "0.2"
+  
   ## Optionally, specify a repository to be used. Brew then generates a '--HEAD | --head' option. 
   ## Remember to also test it. 'master' is the default branch and doesn't need stating with a
   ## :branch conditional.
