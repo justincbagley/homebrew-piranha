@@ -72,8 +72,15 @@ class CustomGitHubPrivateRepositoryReleaseDownloadStrategy < CustomGitHubPrivate
     super
   end
 
+#  def parse_url_pattern
+#    url_pattern = %r{https://github.com/([^/]+)/([^/]+)/releases/download/([^/]+)/(\S+)}
+#    unless @url =~ url_pattern
+#      raise CurlDownloadStrategyError, "Invalid url pattern for GitHub Release."
+#    end
+
   def parse_url_pattern
-    url_pattern = %r{https://github.com/([^/]+)/([^/]+)/releases/download/([^/]+)/(\S+)}
+    # https://github.com/justincbagley/piranha/archive/v0.2-alpha.1b.tar.gz
+    url_pattern = %r{https://github.com/([^/]+)/([^/]+)/archive/([^/]+)/(\S+)}
     unless @url =~ url_pattern
       raise CurlDownloadStrategyError, "Invalid url pattern for GitHub Release."
     end
