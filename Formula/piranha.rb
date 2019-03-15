@@ -2,7 +2,7 @@ class Piranha < Formula
   
   desc "Scripts for file processing and analysis in phylogenomics & phylogeography"
   homepage "https://justinbagley.org/PIrANHA/"
-  url "https://github.com/justincbagley/PIrANHA/archive/v0.2-alpha.1.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+  url "https://github.com/justincbagley/PIrANHA/archive/v0.2-alpha.1.tar.gz?private_token=#{ENV['GITHUB_HOMEBREW_TOKEN']}"
   sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
   version "0.2-alpha.1b"
   
