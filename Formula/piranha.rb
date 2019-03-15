@@ -3,7 +3,7 @@ require_relative "../custom_download_strategy.rb"
 class Piranha < Formula
   
   desc "Scripts for file processing and analysis in phylogenomics & phylogeography"
-  homepage "https://justinbagley.org/PIrANHA/"
+  homepage "https://justinbagley.org/piranha/"
 #  url "https://github.com/justincbagley/PIrANHA/archive/v0.2-alpha.1.tar.gz?private_token=#{ENV['HOMEBREW_GITHUB_API_TOKEN']}"
   url "https://github.com/justincbagley/PIrANHA/archive/v0.2-alpha.1b.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
   sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
@@ -13,12 +13,12 @@ class Piranha < Formula
   ## Remember to also test it. 'master' is the default branch and doesn't need stating with a
   ## :branch conditional.
   head do
-    url "https://github.com/justincbagley/PIrANHA.git"
+    url "https://github.com/justincbagley/piranha.git"
   end
 
   ## Genertes a '--DEVEL | --devel' option:
   #devel do
-  #  url "https://github.com/justincbagley/PIrANHA.git", :using => git
+  #  url "https://github.com/justincbagley/piranha.git", :using => git
   #end
   
   ## Commented out: depends_on "python@2"
@@ -31,19 +31,8 @@ class Piranha < Formula
   ## with ease.
   def install
     prefix.install "piranha"
-    prefix.install "53.phy"
     prefix.install "LICENSE"
     prefix.install "README.md"
-    prefix.install "Subset91_concat.fas"
-    prefix.install "Subset92_concat.fas"
-    prefix.install "Subset93_concat.fas"
-    prefix.install "Subset94_concat.fas"
-    prefix.install "Subset95_concat.fas"
-    prefix.install "Subset96_concat.fas"
-    prefix.install "Subset97_concat.fas"
-    prefix.install "Subset98_concat.fas"
-    prefix.install "Subset99_concat.fas"
-    prefix.install "Subset9_concat.fas"
     prefix.install Dir["bin"]    
     prefix.install Dir["lib"]    
     prefix.install Dir["etc"]    
