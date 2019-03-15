@@ -15,7 +15,11 @@ class Piranha < Formula
   
   desc "Scripts for file processing and analysis in phylogenomics & phylogeography"
   homepage "https://justinbagley.org/PIrANHA/"
-  url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz"
+
+  ### When PIrANHA repo is public:
+  #  url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz"
+  ### When PIrANHA repo is private:
+  url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
   sha256 "<SHA256>"
 
   ## Optionally, specify a repository to be used. Brew then generates a '--HEAD | --head' option. 
