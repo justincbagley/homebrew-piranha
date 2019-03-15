@@ -76,7 +76,10 @@ class Piranha < Formula
 end
 
 ## Tap using:
-## FIRST CHOICE: ```$ brew tap justincbagley/homebrew-piranha ```, then brew install piranha
+## FIRST CHOICE: 
+## TAP: ```$ brew tap justincbagley/homebrew-piranha ```, then brew install piranha
+## UNTAP: ```$ brew untap justincbagley/homebrew-piranha ```
+
 ## ```$ brew tap piranha https://github.com/justincbagley/PIrANHA.git ```
 ## NO it should be tapped using this:  git@github.com:justincbagley/homebrew-piranha.git
 ##
