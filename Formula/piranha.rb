@@ -1,22 +1,7 @@
 class Piranha < Formula
-#class PIrANHA < Formula
-
-  ## Resources used to make this file:
-  ## - Homebrew Formula Cookbook: https://github.com/Homebrew/brew/blob/master/docs/Formula-Cookbook.md
-  ## - Example Homebrew Formula #1: https://github.com/syhw/homebrew/blob/master/Library/Contributions/example-formula.rb
-  ## - Example Homebrew Formula #2: https://github.com/omerxx/homebrew-tools/blob/master/formula/fed.rb
-  ## - Blog #1 - https://www.prodops.io/blog/creating-homebrew-taps-for-private-internal-tools
-  ## - Blog #2 - https://engineering.innovid.com/distributing-command-line-tools-with-homebrew-d03e795cadc8
-  ## 
-  ## Resources not used yet, but potentially valuable for future distributions from
-  ## *private* GitHub repositories:
-  ## - Blog #1 - https://www.prodops.io/blog/creating-homebrew-taps-for-private-internal-tools
-  ## - Blog #2 - https://engineering.innovid.com/distributing-command-line-tools-with-homebrew-d03e795cadc8
   
   desc "Scripts for file processing and analysis in phylogenomics & phylogeography"
   homepage "https://justinbagley.org/PIrANHA/"
-
-  ### When PIrANHA repo is public:
   url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz"
   ### When PIrANHA repo is private:
   # url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
@@ -28,10 +13,10 @@ class Piranha < Formula
   ## Optionally, specify a repository to be used. Brew then generates a '--HEAD | --head' option. 
   ## Remember to also test it. 'master' is the default branch and doesn't need stating with a
   ## :branch conditional.
-  #head "https://github.com/justincbagley/PIrANHA.git"
-  #head do
-  #  url "https://github.com/justincbagley/PIrANHA.git"
-  #end
+  # head "https://github.com/justincbagley/PIrANHA.git"
+  head do
+    url "https://github.com/justincbagley/PIrANHA.git"
+  end
 
   ## Genertes a '--DEVEL | --devel' option:
   #devel do
@@ -74,19 +59,3 @@ class Piranha < Formula
   end
 
 end
-
-## Tap using:
-## FIRST CHOICE: 
-## TAP: ```$ brew tap justincbagley/homebrew-piranha ```, then brew install piranha
-## UNTAP: ```$ brew untap justincbagley/homebrew-piranha ```
-
-## ```$ brew tap piranha https://github.com/justincbagley/PIrANHA.git ```
-## NO it should be tapped using this:  git@github.com:justincbagley/homebrew-piranha.git
-##
-## The tap will be cloned to '/usr/local/Homebrew/Library/Taps/piranha'
-##
-## To undo your tap, just execute: ```$ brew untap piranha ```
-##
-## After tapping, install is as easy as ```$ brew install piranha ```
-##
-
