@@ -1,3 +1,5 @@
+require_relative "../custom_download_strategy.rb"
+
 class Piranha < Formula
   
   desc "Scripts for file processing and analysis in phylogenomics & phylogeography"
