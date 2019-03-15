@@ -17,9 +17,9 @@ class Piranha < Formula
   homepage "https://justinbagley.org/PIrANHA/"
 
   ### When PIrANHA repo is public:
-  #  url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz"
+  url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz"
   ### When PIrANHA repo is private:
-  url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+  # url "https://github.com/justincbagley/PIrANHA/archive/v0.2.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
   sha256 "<SHA256>"
 
   ## Optionally, specify a repository to be used. Brew then generates a '--HEAD | --head' option. 
