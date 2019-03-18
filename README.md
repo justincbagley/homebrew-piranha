@@ -2,7 +2,7 @@
 
 A Homebrew tap with (Ruby) formula for installing the following:
 
-- [PIrANHA](https://github.com/justincbagley/PIrANHA)
+- [PIrANHA](https://github.com/justincbagley/piranha)
 
 
 #### Add this tap
@@ -13,4 +13,4 @@ A Homebrew tap with (Ruby) formula for installing the following:
 - PIrANHA: `brew install piranha`
 <!-- - notes: `brew install PIrANHA`  -->
 
-Under construction... March 9, 2019
+Under construction... March 18, 2019
