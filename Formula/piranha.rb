@@ -15,14 +15,8 @@ class Piranha < Formula
 
   ## Genertes a '--DEVEL | --devel' option:
   devel do
-    # url "https://github.com/justincbagley/piranha.git", :using => git
     url "https://github.com/justincbagley/piranha.git"
   end
-  
-  ## Commented out: depends_on "python@2"
-  ## If any Python >= 2.7 < 3.x is okay (either from OS X or brewed):
-  # depends_on "python"
-  # depends_on "perl"
   
   ## Using 'bin.install' here is essentially saying move '<script>' into #{prefix}/bin/. prefix.install is 
   ## essentially saying move/save script into the main or #{prefix} dir. Dir helps us copy a whole directory
