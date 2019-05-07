@@ -2,9 +2,9 @@ class Piranha < Formula
   
   desc "Scripts for file processing and analysis in phylogenomics & phylogeography"
   homepage "https://justinbagley.org/piranha/"
-  url "https://github.com/justincbagley/piranha/archive/v0.2-alpha.2.tar.gz"
-  sha256 "d4ae0ebbc677cf2efd59ad468dfcb8fb73ce65ee5b8d46f82925e6294eb0de96"
-  version "0.2-alpha.2"
+  url "https://github.com/justincbagley/piranha/archive/v0.3a1.tar.gz"
+  sha256 "bd7579231b6809d3204941e74977aaf0fb5e53848e12199f84a5d8a0cb547895"
+  version "0.3a1"
   
   ## Optionally, specify a repository to be used. Brew then generates a '--HEAD | --head' option. 
   ## Remember to also test it. 'master' is the default branch and doesn't need stating with a
@@ -32,7 +32,7 @@ class Piranha < Formula
   end
 
   test do
-    ## Modified example, commented out: assert_match "piranha v1.0.0", shell_output("#{bin}/piranha -V", 2)
+    ## Modified example, commented out: assert_match "piranha v1.0.4", shell_output("#{bin}/piranha -V", 2)
     system "piranha", "--version"
   end
 
