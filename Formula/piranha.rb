@@ -28,11 +28,12 @@ class Piranha < Formula
     prefix.install Dir["bin"]    
     prefix.install Dir["lib"]    
     prefix.install Dir["etc"]    
+    prefix.install Dir["test"]    
     prefix.install Dir["tmp"]    
   end
 
   test do
-    ## Modified example, commented out: assert_match "piranha v1.0.5", shell_output("#{bin}/piranha -V", 2)
+    ## Modified example, commented out: assert_match "piranha v1.1.1", shell_output("#{bin}/piranha -V", 2)
     system "piranha", "--version"
   end
 
