@@ -19,7 +19,7 @@ class Piranha < Formula
   # end
   
   ## Using 'bin.install' here is essentially saying move '<script>' into #{prefix}/bin/. prefix.install is 
-  ## essentially saying move/save script into the main or #{prefix} dir. Dir helps us copy a whole directory
+  ## essentially saying move script into the main or #{prefix} dir. Dir helps us copy a whole directory
   ## with ease.
   def install
     prefix.install "piranha"
