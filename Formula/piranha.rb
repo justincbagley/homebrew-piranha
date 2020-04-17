@@ -2,9 +2,9 @@ class Piranha < Formula
   
   desc "Scripts for file processing and analysis in phylogenomics & phylogeography"
   homepage "https://justinbagley.org/piranha/"
-  url "https://github.com/justincbagley/piranha/archive/v0.4a.tar.gz"
-  sha256 "359ab3d00fefce20e17ce4dfacd91400f99a990e82f9da5cab5f48146e91c7ed"
-  version "0.4a"
+  url "https://github.com/justincbagley/piranha/archive/v0.4a2.tar.gz"
+  sha256 "40f7e432f0bd233d7dec9fa09161361dddfa9daf0ab1e52b7c43cd3edf888fb6"
+  version "0.4a2"
   
   ## Optionally, specify a repository to be used. Brew then generates a '--HEAD | --head' option. 
   ## Remember to also test it. 'master' is the default branch and doesn't need stating with a
@@ -24,8 +24,11 @@ class Piranha < Formula
   def install
     prefix.install "piranha"
     prefix.install "LICENSE"
+    prefix.install "Quick_Guide.md"
+    prefix.install "Quick_Guide.pdf"
     prefix.install "README.md"
     prefix.install Dir["bin"]    
+    prefix.install Dir["install"]    
     prefix.install Dir["lib"]    
     prefix.install Dir["etc"]    
     prefix.install Dir["test"]    
@@ -33,7 +36,7 @@ class Piranha < Formula
   end
 
   test do
-    ## Modified example, commented out: assert_match "piranha v1.1.1", shell_output("#{bin}/piranha -V", 2)
+    ## Modified example, commented out: assert_match "piranha v1.1.2", shell_output("#{bin}/piranha -V", 2)
     system "piranha", "--version"
   end
 
