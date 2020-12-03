@@ -31,6 +31,7 @@ class Piranha < Formula
     prefix.install "Quick_Guide.pdf"
     prefix.install "README.md"
     prefix.install Dir["bin"]    
+    prefix.install Dir["completions"]    
     prefix.install Dir["install"]    
     prefix.install Dir["lib"]    
     prefix.install Dir["etc"]    
@@ -39,7 +40,7 @@ class Piranha < Formula
   end
 
   test do
-    ## Modified example, commented out: assert_match "piranha v1.1.2", shell_output("#{bin}/piranha -V", 2)
+    ## Modified example, commented out: assert_match "piranha v1.1.5", shell_output("#{bin}/piranha -V", 2)
     system "piranha", "--version"
   end
 
