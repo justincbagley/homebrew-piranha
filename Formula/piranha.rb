@@ -14,9 +14,9 @@ class Piranha < Formula
   end
 
   ## Genertes a '--DEVEL | --devel' option:
-  # devel do
-  #   url "https://github.com/justincbagley/piranha.git"
-  # end
+  devel do
+    url "https://github.com/justincbagley/piranha.git"
+  end
   
   ## Using 'bin.install' here is essentially saying move '<script>' into #{prefix}/bin/. prefix.install is 
   ## essentially saying move script into the main or #{prefix} dir. Dir helps us copy a whole directory
