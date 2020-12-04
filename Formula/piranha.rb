@@ -9,15 +9,8 @@ class Piranha < Formula
   ## Optionally, specify a repository to be used. Brew then generates a '--HEAD | --head' option. 
   ## Remember to also test it. 'master' is the default branch and doesn't need stating with a
   ## :branch conditional.
-  head do
-    url "https://github.com/justincbagley/piranha.git"
-  end
+  head "https://github.com/justincbagley/piranha.git"
 
-  ## Genertes a '--DEVEL | --devel' option:
-  devel do
-    url "https://github.com/justincbagley/piranha.git"
-  end
-  
   ## Using 'bin.install' here is essentially saying move '<script>' into #{prefix}/bin/. prefix.install is 
   ## essentially saying move script into the main or #{prefix} dir. Dir helps us copy a whole directory
   ## with ease.
