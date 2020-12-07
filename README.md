@@ -15,6 +15,14 @@ A Homebrew tap with (Ruby) formula for installing the following:
 
 #### Update
 
+Regular upgrade to latest published release/version:
+
 `brew upgrade piranha`
+
+**Recommended:**
+
+Upgrade to latest cutting-edge development version:
+
+`brew upgrade --fetch-HEAD piranha`
 
 Under construction... March 18, 2019
