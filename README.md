@@ -1,12 +1,5 @@
 # homebrew-piranha
 
-Justin C. Bagley, Ph.D
-
-_Jacksonville State University_
-_Virginia Commonwealth University_
-
-December 7, 2020
-
 A Homebrew tap with (Ruby) formula for installing the following:
 
 - [PIrANHA](https://github.com/justincbagley/piranha)
@@ -31,3 +24,5 @@ Regular upgrade to latest published release/version:
 Upgrade to latest cutting-edge development version:
 
 `brew upgrade --fetch-HEAD piranha`
+
+_Last update:_ December 7, 2020
