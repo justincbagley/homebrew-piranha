@@ -25,4 +25,9 @@ Upgrade to latest cutting-edge development version:
 
 `brew upgrade --fetch-HEAD piranha`
 
-Under construction... March 18, 2019
+Justin C. Bagley, Ph.D
+
+_Jacksonville State University_
+_Virginia Commonwealth University_
+
+December 7, 2020
