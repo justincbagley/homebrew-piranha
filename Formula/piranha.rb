@@ -31,13 +31,12 @@ class Piranha < Formula
     prefix.install Dir["test"]    
     prefix.install Dir["tmp"]
 
-    # Add piranha utility script to $(brew --prefix)/bin, usually /usr/local/bin:
-    if File.file?("#{bin}/piranha") then
-        system "rm", "#{bin}/piranha"
-    end
+    # Add piranha utility script, as well as the script to source completions, to 
+    # "$(brew --prefix)/bin", which is usually "/usr/local/bin":
     bin.install "#{prefix}/bin/piranha"
+    bin.install "#{prefix}/completions/source_piranha_compl.sh"
     
-    # Add installer scripts to local /etc/ dir (first removing them, if older versions present): 
+    # Add installer scripts to local "/etc/" dir (first removing them, if older versions present): 
     if File.file?("#{etc}/local_piranha") then
         system "rm", "#{etc}/local_piranha"
     end
@@ -46,6 +45,18 @@ class Piranha < Formula
     end
     etc.install "#{prefix}/install/local_piranha" 
     etc.install "#{prefix}/install/brew_piranha"
+  end
+
+  def post_install
+    system "bash", "source_piranha_compl.sh"
+  end
+
+  def caveats; <<-EOS
+    One line was added to your ~/.bash_profile to make dynamic tab completion of function names 
+    available on the command line while running piranha.
+    It will still be there after an uninstall, but is adaptive (nothing happens if piranha was uninstalled).
+    If you're a zsh person, then patches are welcome: https://github.com/justincbagley/piranha/blob/master/completions/source_piranha_compl.sh
+    EOS
   end
 
   test do
