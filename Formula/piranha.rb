@@ -33,7 +33,8 @@ class Piranha < Formula
 
     # Add symlink to main executable script:
     # INFO: Example linked at URL: https://discourse.brew.sh/t/brew-not-creating-symlinks-to-executable-scripts-in-formula/7262
-    bin.install_symlink "piranha" => "piranha"
+    #bin.install_symlink "#{prefix}/piranha" => "piranha"
+    bin.install_symlink "#{prefix}/piranha"
 
     # Add installer scripts to local /etc/ dir (first removing them, if older versions present): 
     if File.file?("#{etc}/local_piranha") then
