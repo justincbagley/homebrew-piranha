@@ -30,10 +30,26 @@ class Piranha < Formula
     prefix.install Dir["etc"]    
     prefix.install Dir["test"]    
     prefix.install Dir["tmp"]    
+
+    # Add symlink to main executable script:
+    # INFO: Example linked at URL: https://discourse.brew.sh/t/brew-not-creating-symlinks-to-executable-scripts-in-formula/7262
+    bin.install_symlink "piranha" => "piranha"
+
+    # Add installer scripts to local /etc/ dir (first removing them, if older versions present): 
+    if File.file?("#{etc}/local_piranha") then
+        system "rm", "#{etc}/local_piranha"
+    end
+    if File.file?("#{etc}/brew_piranha") then
+        system "rm", "#{etc}/brew_piranha"
+    end
+    etc.install "install/local_piranha"    
+    etc.install "install/brew_piranha"    
+
   end
 
   test do
-    ## Modified example, commented out: assert_match "piranha v1.1.5", shell_output("#{bin}/piranha -V", 2)
+    ## Modified example, commented out: assert_match "piranha v1.1.6", shell_output("#{bin}/piranha -V", 2)
+    system "false"
     system "piranha", "--version"
   end
 
