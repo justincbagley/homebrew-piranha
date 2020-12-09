@@ -15,27 +15,28 @@ class Piranha < Formula
   ## essentially saying move script into the main or #{prefix} dir. Dir helps us copy a whole directory
   ## with ease.
   def install
-    bin.install "piranha"
-    bin.install "LICENSE"
-    bin.install "CODE_OF_CONDUCT.md"
-    bin.install "CITATION.md"
-    bin.install "changeLog.md"
-    bin.install "Quick_Guide.md"
-    bin.install "Quick_Guide.pdf"
-    bin.install "README.md"
-    bin.install Dir["bin"]    
-    bin.install Dir["completions"]    
-    bin.install Dir["install"]    
-    bin.install Dir["lib"]    
-    bin.install Dir["etc"]    
-    bin.install Dir["test"]    
-    bin.install Dir["tmp"]
+    prefix.install "piranha"
+    prefix.install "LICENSE"
+    prefix.install "CODE_OF_CONDUCT.md"
+    prefix.install "CITATION.md"
+    prefix.install "changeLog.md"
+    prefix.install "Quick_Guide.md"
+    prefix.install "Quick_Guide.pdf"
+    prefix.install "README.md"
+    prefix.install Dir["bin"]    
+    prefix.install Dir["completions"]    
+    prefix.install Dir["install"]    
+    prefix.install Dir["lib"]    
+    prefix.install Dir["etc"]    
+    prefix.install Dir["test"]    
+    prefix.install Dir["tmp"]
 
-    # Add symlink to main executable script:
-    # INFO: Example linked at URL: https://discourse.brew.sh/t/brew-not-creating-symlinks-to-executable-scripts-in-formula/7262
-    #bin.install_symlink "#{prefix}/piranha" => "piranha"
-    #bin.install_symlink "#{prefix}/piranha"
-
+    # Add piranha utility script to $(brew --prefix)/bin, usually /usr/local/bin:
+    if File.file?("#{bin}/piranha") then
+        system "rm", "#{bin}/piranha"
+    end
+    bin.install "#{prefix}/bin/piranha"
+    
     # Add installer scripts to local /etc/ dir (first removing them, if older versions present): 
     if File.file?("#{etc}/local_piranha") then
         system "rm", "#{etc}/local_piranha"
@@ -43,8 +44,8 @@ class Piranha < Formula
     if File.file?("#{etc}/brew_piranha") then
         system "rm", "#{etc}/brew_piranha"
     end
-    etc.install "#{prefix}/bin/install/local_piranha" 
-    etc.install "#{prefix}/bin/install/brew_piranha"
+    etc.install "#{prefix}/install/local_piranha" 
+    etc.install "#{prefix}/install/brew_piranha"
   end
 
   test do
