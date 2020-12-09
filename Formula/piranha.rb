@@ -51,8 +51,8 @@ class Piranha < Formula
   def post_install
     system "chmod", "+x", "#{bin}/piranha"
     system "chmod", "+x", "#{bin}/source_piranha_compl.sh"
-    system "bash", "source_piranha_compl.sh"
-    #system ".", "source_piranha_compl.sh"
+    #system "bash", "source_piranha_compl.sh"
+    system ".", "source_piranha_compl.sh"
   end
 
   def caveats; <<-EOS
