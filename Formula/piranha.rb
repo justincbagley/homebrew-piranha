@@ -53,7 +53,7 @@ class Piranha < Formula
 
   def caveats; <<-EOS
     One line was added to your ~/.bash_profile to make dynamic tab completion of function names 
-    available on the command line while running piranha.
+      available on the command line while running piranha.
     It will still be there after an uninstall, but is adaptive (nothing happens if piranha was uninstalled).
     If you're a zsh person, then patches are welcome: https://github.com/justincbagley/piranha/blob/master/completions/source_piranha_compl.sh
     EOS
