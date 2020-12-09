@@ -15,7 +15,6 @@ class Piranha < Formula
   ## essentially saying move script into the main or #{prefix} dir. Dir helps us copy a whole directory
   ## with ease.
   def install
-    bin.install "piranha"
     prefix.install "piranha"
     prefix.install "LICENSE"
     prefix.install "CODE_OF_CONDUCT.md"
@@ -32,6 +31,8 @@ class Piranha < Formula
     prefix.install Dir["test"]    
     prefix.install Dir["tmp"]
     
+    bin.install "#{prefix}/piranha"
+
     # Add symlink to main executable script:
     # INFO: Example linked at URL: https://discourse.brew.sh/t/brew-not-creating-symlinks-to-executable-scripts-in-formula/7262
     #bin.install_symlink "#{prefix}/piranha" => "piranha"
