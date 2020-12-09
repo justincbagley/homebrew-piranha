@@ -15,6 +15,7 @@ class Piranha < Formula
   ## essentially saying move script into the main or #{prefix} dir. Dir helps us copy a whole directory
   ## with ease.
   def install
+    bin.install "piranha"
     prefix.install "piranha"
     prefix.install "LICENSE"
     prefix.install "CODE_OF_CONDUCT.md"
@@ -29,12 +30,12 @@ class Piranha < Formula
     prefix.install Dir["lib"]    
     prefix.install Dir["etc"]    
     prefix.install Dir["test"]    
-    prefix.install Dir["tmp"]    
-
+    prefix.install Dir["tmp"]
+    
     # Add symlink to main executable script:
     # INFO: Example linked at URL: https://discourse.brew.sh/t/brew-not-creating-symlinks-to-executable-scripts-in-formula/7262
     #bin.install_symlink "#{prefix}/piranha" => "piranha"
-    bin.install_symlink "#{prefix}/piranha"
+    #bin.install_symlink "#{prefix}/piranha"
 
     # Add installer scripts to local /etc/ dir (first removing them, if older versions present): 
     if File.file?("#{etc}/local_piranha") then
@@ -43,9 +44,8 @@ class Piranha < Formula
     if File.file?("#{etc}/brew_piranha") then
         system "rm", "#{etc}/brew_piranha"
     end
-    etc.install "#{prefix}/install/local_piranha"    
-    etc.install "#{prefix}/install/brew_piranha"    
-
+    etc.install "#{prefix}/install/local_piranha" 
+    etc.install "#{prefix}/install/brew_piranha"
   end
 
   test do
