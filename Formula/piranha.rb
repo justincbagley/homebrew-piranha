@@ -43,8 +43,8 @@ class Piranha < Formula
     if File.file?("#{etc}/brew_piranha") then
         system "rm", "#{etc}/brew_piranha"
     end
-    etc.install "#{prefix}/install/local_piranha" 
-    etc.install "#{prefix}/install/brew_piranha"
+    etc.install "#{prefix}/bin/install/local_piranha" 
+    etc.install "#{prefix}/bin/install/brew_piranha"
   end
 
   test do
