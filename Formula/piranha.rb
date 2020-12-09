@@ -34,7 +34,7 @@ class Piranha < Formula
 
     # Add piranha utility script, as well as the script to source completions, to 
     # "$(brew --prefix)/bin", which is usually "/usr/local/bin":
-    bin.install "piranha"
+    bin.install "#{prefix}/piranha"
     bin.install "#{prefix}/completions/source_piranha_compl.sh"
     
     # Add installer scripts to local "/etc/" dir (first removing them, if older versions present): 
