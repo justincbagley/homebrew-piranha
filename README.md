@@ -2,27 +2,34 @@
 
 A Homebrew tap with (Ruby) formula for installing the following:
 
-- [PIrANHA](https://github.com/justincbagley/piranha)
+-   [PIrANHA](https://github.com/justincbagley/piranha)
 
+## Tap
 
-#### Add this tap
+### Add this tap
+
 `brew tap justincbagley/piranha`
 
+### Install
 
-#### Install
-- PIrANHA: `brew install piranha`
-<!-- - notes: `brew install PIrANHA`  -->
+Regular install to latest published release/version:
 
-#### Update
+-   `brew install piranha`
+
+Install latest cutting-edge development version:
+
+-   `brew install --HEAD piranha`
+
+### Update
 
 Regular upgrade to latest published release/version:
 
-`brew upgrade piranha`
+-   `brew upgrade piranha`
 
 **Recommended:**
 
 Upgrade to latest cutting-edge development version:
 
-`brew upgrade --fetch-HEAD piranha`
+-   `brew upgrade --fetch-HEAD piranha`
 
-_Last update:_ December 7, 2020
+*Last update:* December 7, 2020
