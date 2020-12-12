@@ -26,7 +26,7 @@ Regular upgrade to latest published release/version:
 
 -   `brew upgrade piranha`
 
-**Recommended:**
+*Recommended:*
 
 Upgrade to latest cutting-edge development version:
 
